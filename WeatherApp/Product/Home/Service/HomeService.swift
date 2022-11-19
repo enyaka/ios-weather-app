@@ -16,7 +16,7 @@ protocol HomeServiceProtocol {
 final class HomeService : HomeServiceProtocol {
     
     func fetchWeather(lon: String, lat: String, onSucces: @escaping (Weather) -> Void, onError: @escaping (Alamofire.AFError) -> Void) {
-        NetworkManager.shared.fetchData(path: APIURLs.getWeatherWithLocationUrl(latitude: lat, longitude: lon)) { [weak self] weather in
+        NetworkManager.shared.fetchData(path: APIURLs.getWeatherWithLocationUrl(latitude: lat, longitude: lon), expecting: Weather.self) { [weak self] weather in
             onSucces(weather)
         } onError: { error in
             onError(error)
@@ -24,8 +24,8 @@ final class HomeService : HomeServiceProtocol {
     }
     
     func fetchCityLocation(city: String, onSucces: @escaping (City)->Void, onError: @escaping (AFError)->Void) {
-        NetworkManager.shared.fetchDataAsList(path: APIURLs.getCityLocationUrl(city: city)) { [weak self] city in
-            onSucces(city)
+        NetworkManager.shared.fetchData(path: APIURLs.getCityLocationUrl(city: city), expecting: [City].self) { [weak self] city in
+            onSucces(city[0])
         } onError: { error in
             onError(error)
         }

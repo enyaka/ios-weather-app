@@ -27,7 +27,6 @@
 		FCCE9955291403260050795F /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE9954291403260050795F /* WeatherAppUITests.swift */; };
 		FCCE9957291403260050795F /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCE9956291403260050795F /* WeatherAppUITestsLaunchTests.swift */; };
 		FCF7AA43292637F100170628 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7AA42292637F100170628 /* UIViewController+Ext.swift */; };
-		FCF7AA4529263C6700170628 /* AFError+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7AA4429263C6700170628 /* AFError+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		FCCE9954291403260050795F /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		FCCE9956291403260050795F /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FCF7AA42292637F100170628 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		FCF7AA4429263C6700170628 /* AFError+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AFError+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +147,6 @@
 			children = (
 				FC9038F329140ECB0040D475 /* UIView+Ext.swift */,
 				FCF7AA42292637F100170628 /* UIViewController+Ext.swift */,
-				FCF7AA4429263C6700170628 /* AFError+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -400,7 +397,6 @@
 				FC7AD41829155B1C0079CAFE /* HomeService.swift in Sources */,
 				FC9038F7291416D30040D475 /* APIURLs.swift in Sources */,
 				FC9038F429140ECB0040D475 /* UIView+Ext.swift in Sources */,
-				FCF7AA4529263C6700170628 /* AFError+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

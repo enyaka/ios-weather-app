@@ -18,17 +18,17 @@ final class NetworkManager {
 
 
 extension NetworkManager {
-    func fetchData<T>(path: String, onSucces: @escaping (T) -> Void, onError: (AFError) -> Void) where T: Decodable {
-            request(path: path).responseDecodable(of: T.self) { response in
+    func fetchData<T>(path: String,expecting: T.Type, onSucces: @escaping (T) -> Void, onError: (AFError) -> Void) where T: Decodable {
+            request(path: path).responseDecodable(of: expecting) { response in
                 guard let model = response.value else { print(response.error as Any); return }
                 onSucces(model)
             }
     }
-    func fetchDataAsList<T>(path: String, onSucces: @escaping (T) -> Void, onError: (AFError) -> Void) where T: Decodable {
-        request(path: path).responseDecodable(of: [T].self) { response in
-            guard let model = response.value, !model.isEmpty else { print(response.error as Any); return }
-            onSucces(model[0])
-        }
-    }
+//    func fetchDataAsList<T>(path: String, onSucces: @escaping (T) -> Void, onError: (AFError) -> Void) where T: Decodable {
+//        request(path: path).responseDecodable(of: [T].self) { response in
+//            guard let model = response.value, !model.isEmpty else { print(response.error as Any); return }
+//            onSucces(model[0])
+//        }
+//    }
 }
 

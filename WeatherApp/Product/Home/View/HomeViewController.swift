@@ -111,12 +111,14 @@ final class HomeViewController: UIViewController, HomeViewControllerDelegate {
         configure()
         setLayouts()
     }
+    
 
 }
 
 extension HomeViewController {
     
     private func setup() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
         viewModel.delegate = self
         searchTextField.delegate = self
         locationManager.delegate = self
